@@ -23,21 +23,32 @@
                      <input type="button" value="5" onclick="insere(5)">
                      <input type="button" value="6" onclick="insere(6)">
                      <input type="button" value="-" class="operador" onclick="insere('-')">
-                     <input type="button" value="CL" onclick="insere()">
+                     <input type="button" value="CE" onclick="reseta()">
                      <br>
                      <input type="button" value="7" onclick="insere(7)">
                      <input type="button" value="8" onclick="insere(8)">
                      <input type="button" value="9" onclick="insere(9)">
-                     <input type="button" value="X" class="operador" onclick="insere('X')">
-                     <input type="button" value="%" class="operador" onclick="insere('%')">
+                     <input type="button" value="X" class="operador" onclick="insere('*')">
+                     <input type="button" value="/" class="operador" onclick="insere('/')">
                      <br>
-                     <input type="button" value="=" onclick="insere('=')" class="recebe">
+                     <input type="button" value="=" onclick="calcula()" class="recebe">
                  </form>
                </div>
                </section>  
                <script> 
+                 let visor = document.getElementById("visor");
                    function insere(num){
-                       document.getElementById("visor").value = document.getElementById("visor").value + num;
+                       visor.value = visor.value + num;
+                   }
+                   function reseta(){
+                    visor.value = '';
+                   }
+
+                   function calcula(){ 
+                    var resultado = 0;
+                    resultado = visor.value;
+                    visor.value = '';
+                    visor.value = eval(resultado);
                    }
                </script>
 </body>

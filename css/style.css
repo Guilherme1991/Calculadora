@@ -7,9 +7,8 @@ body{
     background-size: cover;
 }
 .calculator{
-    border: 1px solid black;
     padding: 10px;
-    background: rgb(177, 177, 177);
+    background: rgba(156, 156, 156, 0.35);
     border-radius: 10px;
     width: 350px;
 }
@@ -18,7 +17,7 @@ body{
     height: 60px;
     border: 1px solid black;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 47px;
 }
 form input{
     background: rgb(0, 0, 0);
